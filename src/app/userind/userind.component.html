@@ -1,0 +1,9 @@
+<div *ngIf="isUserLoggedIn(); else loggedOutTemplate">
+<h2> vc logou bem vindo, {{ username }}</h2>
+<button (click)="logout()"> sair</button>
+</div>
+
+<ng-template>
+    <h4> vc nao esta logado: clique paraa navegar pelo login</h4>
+    <button routerLink="/login"> ir para a tela de login</button>
+</ng-template>
